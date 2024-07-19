@@ -7,12 +7,12 @@ echo $s.$name,"<br>","<br>";
 //2
 $x=40;
 $y=20;
-if($x>=1 && $y<=(pow(10,5)))
+if($x>=1 && $y<=(pow(10,5)))//test
 {
     echo $x," ","+"," ","$y","=",$x+$y,"<br>";
     echo $x," ","*"," ","$y","=",$x*$y,"<br>";
     echo $x," ","-"," ","$y","=",$x-$y,"<br>";
-}
+} //test
 //-----------------------------
 //3
 $a=1;
@@ -228,4 +228,28 @@ if($letter=='a' ||$letter=='e'||$letter=='i'||$letter=='o'||$letter=='u')
 }
 
 //-----------------------------
+
+$n=readline("enter your number:");
+
+if($n%3==0 && $n%5==0)
+{
+    echo "FizzBuzz";
+}elseif($n%5==0)
+{
+    echo "Buzz";
+}elseif($n%3==0)
+{
+    echo "Fizz";
+}else{
+    echo $n;
+}
+//------------
+$s = 15;
+$g = 30;
+$s = $s + $g;
+$g = $s - $g;
+$s = $s - $g;
+echo $s, " ", $g;
+
+
 ?>
