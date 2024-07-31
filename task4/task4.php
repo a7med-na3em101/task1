@@ -124,7 +124,8 @@
 
     //-----------------------------------------------------------
     //3
-
+//use meaningful naming conventions it should be Rectangle 
+// you can check this article: https://www.codementor.io/@veenitchauhan/basics-of-naming-conventions-for-php-developers-eliexmew6
     class Rec{
         private  $length=1.0;
         private  $width=1.0;
