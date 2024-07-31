@@ -1,5 +1,6 @@
     <?php
     //1
+//It will be more organized if you separate at least every task into one file 
     class Circle {
         private float $radius = 1.0;
         private string $color = "red";
