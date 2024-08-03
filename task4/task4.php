@@ -56,6 +56,7 @@
         }
         function getName()
         {
+            //this function have 2 returns and it will return firstName only
             return $this->firstName;
             return $this->lastName;
         }
