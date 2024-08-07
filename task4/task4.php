@@ -1,5 +1,6 @@
     <?php
     //1
+//It will be more organized if you separate at least every task into one file 
     class Circle {
         private float $radius = 1.0;
         private string $color = "red";
@@ -55,6 +56,7 @@
         }
         function getName()
         {
+            //this function have 2 returns and it will return firstName only
             return $this->firstName;
             return $this->lastName;
         }
@@ -124,7 +126,8 @@
 
     //-----------------------------------------------------------
     //3
-
+//use meaningful naming conventions it should be Rectangle 
+// you can check this article: https://www.codementor.io/@veenitchauhan/basics-of-naming-conventions-for-php-developers-eliexmew6
     class Rec{
         private  $length=1.0;
         private  $width=1.0;
