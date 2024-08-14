@@ -26,7 +26,7 @@ class Author {
         return $this->gender;
     }
 
-    public function toString() {
+    public function __toString() {
         return "Author[name={$this->name}, email={$this->email}, gender={$this->gender}]";
     }
 }
@@ -167,7 +167,7 @@ abstract class Person {
         $this->address = $address;
     }
 
-    abstract public function toString();
+    abstract public function __toString();
 }
 
 class Student extends Person {
@@ -206,7 +206,7 @@ class Student extends Person {
         $this->fee = $fee;
     }
 
-    public function toString() {
+    public function __toString() {
         return "Student[Person[name={$this->name}, address={$this->address}], program={$this->program}, year={$this->year}, fee={$this->fee}]";
     }
 }
@@ -237,16 +237,16 @@ class Staff extends Person {
         $this->pay = $pay;
     }
 
-    public function toString() {
+    public function __toString() {
         return "Staff[Person[name={$this->name}, address={$this->address}], school={$this->school}, pay={$this->pay}]";
     }
 }
 
     $student = new Student("ahmed", "shobra", "Computer Science", 2024, 15000);
-    echo $student->toString() . "\n";
+    echo $student->__toString() . "\n";
 
     $staff = new Staff("mohamed", "shobra", "Mathematics", 50000);
-    echo $staff->toString() . "\n";
+    echo $staff->__toString() . "\n";
 
 
 interface Shape {
@@ -257,7 +257,7 @@ interface Shape {
     public function setColor(string $color): void;
     public function isFilled(): bool;
     public function setFilled(bool $filled): void;
-    public function toString(): string;
+    public function __toString(): string;
 }
 
 class AbstractShape implements Shape {
@@ -285,7 +285,7 @@ class AbstractShape implements Shape {
         $this->filled = $filled;
     }
 
-    public function toString(): string {
+    public function __toString(): string {
         return "Shape[color={$this->color}, filled={$this->filled}]";
     }
 }
@@ -353,7 +353,7 @@ class Rectangle extends AbstractShape {
         return 2 * ($this->width + $this->length);
     }
 
-    public function toString(): string {
+    public function __toString(): string {
         return "Rectangle[" . parent::toString() . ", width={$this->width}, length={$this->length}]";
     }
 }
@@ -381,19 +381,19 @@ class Square extends Rectangle {
         $this->setSide($length);
     }
 
-    public function toString(): string {
+    public function __toString(): string {
         return "Square[" . parent::toString() . "]";
     }
 }
 
 $circle = new Circle1(5.0, "blue", false);
-echo $circle->toString() . "\n";
+echo $circle->__toString() . "\n";
 
 $rectangle = new Rectangle(4.0, 6.0, "green", true);
-echo $rectangle->toString() . "\n";
+echo $rectangle->__toString() . "\n";
 
 $square = new Square(4.0, "yellow", false);
-echo $square->toString() . "\n";
+echo $square->__toString() . "\n";
 
 
 ?>
